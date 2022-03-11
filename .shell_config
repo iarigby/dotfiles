@@ -1,0 +1,3 @@
+#!/bin/sh
+export SHELL_CONFIG=$HOME/.config/shell
+export SETUP_DIR=$HOME/setup

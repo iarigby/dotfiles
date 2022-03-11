@@ -1,0 +1,14 @@
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	amend = commit --amend -C HEAD
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[user]
+	name = ia rigby
+	email = marvinzem@gmail.com
+[init]
+	defaultBranch = main
+[core]
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
