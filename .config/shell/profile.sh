@@ -1,5 +1,7 @@
 if [[ -n "$PS1" ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_CONNECTION" ]]; then
-  tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+  tmux -CC attach-session -t ssh_tmux || tmux -CC new-session -s ssh_tmux
+  clear
+  exit
 fi
 
 source $SHELL_CONFIG/aliases.sh
