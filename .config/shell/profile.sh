@@ -11,6 +11,8 @@ source $SHELL_CONFIG/functions.sh
 export MANPATH="/usr/local/man:$MANPATH"
 
 export FZF_DEFAULT_COMMAND='fd -E .git -E node_modules'
+
+export PIPENV_VENV_IN_PROJECT="enabled"
 # cool command but barely use
 # [ -z "$(command -v thefuck)" ] || eval $(thefuck --alias)
 
