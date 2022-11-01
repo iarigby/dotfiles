@@ -9,7 +9,7 @@ source $SHELL_CONFIG/path.sh
 source $SHELL_CONFIG/functions.sh
 source $SHELL_CONFIG/environment.sh
 
-export LANG=en_US.utf8
+export LANG=en_US.UTF-8
 export MANPATH="/usr/local/man:$MANPATH"
 
 export FZF_DEFAULT_COMMAND='fd -E .git -E node_modules'
