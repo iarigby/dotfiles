@@ -37,6 +37,22 @@ function bsnm() {
 	basename $(PWD)
 }
 
-function download_tracks_from_list() {
+function download_wav_tracks_from_list() {
 	cat ~/Music/Tracks/list.txt | grep -v '^#' | grep -v '^$' | xargs -I {} deemix -p ~/Music/Tracks/all --bitrate wav {}
+}
+
+
+function download_flac_tracks_from_list() {
+	cat ~/Music/Tracks/list.txt | grep -v '^#' | grep -v '^$' | xargs -I {} deemix -p ~/Music/Tracks/all --bitrate flac {}
+}
+
+function project_viewer() {
+	cd ~/dev/dt/project-viewer
+	open_address_with_delay 2 http://127.0.0.1:5000 &
+	pipenv run app
+}
+
+function open_address_with_delay() {
+	sleep $1
+	open $2
 }
