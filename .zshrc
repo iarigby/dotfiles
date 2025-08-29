@@ -15,5 +15,10 @@ source $ZSH/oh-my-zsh.sh
 source $SHELL_CONFIG/profile.sh
 source $ZSH_CUSTOM/find_history.sh
 
+# append completions to fpath
+fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
